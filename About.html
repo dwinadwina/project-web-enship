@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biro Enship - Himavo Micro IT</title>
+    <link rel="icon" href="image/Enship no circle.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+      main {
+            flex: 1;
+            margin-top: 80px;
+            margin-bottom: 60px;
+            padding: 0 20px;
+      }
+        header {
+            background-color: #002B5B;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #FFD700;
+            color: #002B5B;
+        }
+        nav a:active {
+            background-color: #FFD700; 
+            color: white;
+        }
+        main {
+            flex: 1;
+            overflow-y: auto;
+            margin-top: 80px;
+            margin-bottom: 60px;
+            padding: 0 20px;
+        }
+        section {
+            padding: 60px 40px;
+            background-color: white;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: calc(100vh - 140px);
+        }
+        .hero-section img {
+            width: 50%;
+            border-radius: 10px;
+        }
+        .hero-content {
+            width: 45%;
+        }
+        .hero-content h2 {
+            font-size: 1.8em;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .hero-content p {
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .hero-content button {
+            background-color: #002B5B;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            font-size: 1em;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .hero-content button:hover {
+            background-color: #FFD700;
+            color: #002B5B;
+        }
+        #struktur {
+            text-align: center;
+            padding: 60px 20px 80px; /* bawah ditambah */
+            background: linear-gradient(135deg, #f0f4ff, #ffffff);
+        }
+
+        .struktur-title {
+            color:#002B5B;
+            text-align: center;
+        }
+
+        .struktur-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+        max-width: 1200px;       
+        margin: 0 auto;           
+        padding: 20px;            
+        }
+
+        .struktur-card {
+            background-color: #ffffff;
+            padding: 25px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 43, 91, 0.15);
+            text-align: center;
+            width: 100%;
+            max-width: 250px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .struktur-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 43, 91, 0.2);
+        }
+
+        .struktur-card img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 4px solid #002B5B;
+            transition: transform 0.3s ease;
+        }
+
+        .struktur-card img:hover {
+            transform: scale(1.05);
+        }
+
+        .struktur-card h3 {
+            font-size: 1.1em;
+            color: #002B5B;
+            margin-bottom: 5px;
+        }
+
+        .struktur-card p {
+            font-size: 0.95em;
+            color: #666;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+            }
+
+            .hero-section img,
+            .hero-content {
+                width: 100%;
+            }
+
+            .struktur-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #struktur h2 {
+                font-size: 1.7em;
+            }
+
+            .struktur-card {
+                padding: 20px;
+            }
+        }
+
+        #testimoni-enship {
+            background: linear-gradient(135deg, #f0f4ff, #ffffff);
+            padding: 60px 20px;
+            font-family: 'Poppins', sans-serif;
+            color: #002B5B; /* biru gelap */
+        }
+
+        #testimoni-enship h3 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 50px;
+            font-weight: bold;
+            text-transform: capitalize;
+            color: #002B5B;
+        }
+
+        .testi-container {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .testi-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px 30px;
+            box-shadow: 0 8px 20px rgba(10, 77, 145, 0.15);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 6px solid #FFD700; /* kuning */
+        }
+
+        .testi-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(10, 77, 145, 0.3);
+        }
+
+        .testi-card::before {
+            content: '“';
+            font-family: 'Georgia', serif;
+            font-size: 6rem;
+            color: #FFD700; /* kuning */
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+
+        .testi-text {
+            font-style: italic;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #002B5B; /* biru gelap */
+            z-index: 2;
+            position: relative;
+        }
+        .testi-author {
+            font-weight: bold;
+            color: #002B5B;
+            margin-top: 0;
+        }
+        @media (max-width: 480px) {
+            #testimoni-enship h2 {
+            font-size: 2rem;
+            }
+            .testi-card {
+            padding: 20px 15px;
+            }
+        }
+        .footer {
+          background-color: #004080;
+          color: white;
+          padding: 40px 20px 0;
+        }
+
+        .footer-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 30px;
+          max-width: 1200px;
+          margin: auto;
+        }
+
+        .footer-col {
+          flex: 1 1 250px;
+        }
+
+        .footer-col h4 {
+          margin-bottom: 10px;
+        }
+
+        .footer-col p {
+          margin: 5px 0;
+        }
+
+        .footer-col a {
+          color: #FFD700;
+          text-decoration: none;
+        }
+
+        .footer-logos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        transform: translateX(-130px);
+        }
+
+        .footer-logos img {
+          max-height: 120px;
+          max-width: 100%;
+          object-fit: contain;
+          flex: 1 1 30%;
+        }
+
+        .social-icons {
+          display: flex;
+          gap: 10px;
+          flex-wrap: wrap;
+          margin-top: 10px;
+        }
+
+        .social-icons img {
+          width: 32px;
+          height: 32px;
+        }
+
+        .footer-divider {
+          height: 2px;
+          background-color: #0055aa;
+          margin: 40px auto 10px;
+          width: 90%;
+          border-radius: 1px;
+        }
+
+        .footer-bottom-nav {
+          text-align: center;
+          padding: 10px 14px;
+          background-color: #003366;
+        }
+
+        .footer-bottom-nav a {
+          color: white;
+          margin: 0 15px;
+          text-decoration: none;
+        }
+
+        @media screen and (max-width: 768px) {
+          .footer-container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+          }
+
+          .footer-logos {
+            justify-content: center;
+            transform: none; 
+            width: 100%;     
+            margin-top: 20px; 
+          }
+
+          .footer-logos img {
+            max-height: 100px;
+            flex: 1 1 45%; 
+          }
+
+          .social-icons {
+            justify-content: center;
+          }
+
+          .footer-bottom-nav a {
+            display: block;
+            margin: 8px 0;
+          }
+        }
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-section img, .hero-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HIMAVO MICRO IT | ENSHIP</h1>
+        <nav>
+            <a href="Home.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Product.html">Product</a>
+            <a href="Activities.html">Activities</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" style="padding: 60px 20px; background-color: #f4f7fb;">
+            <h2 style="text-align:center; font-size: 2.5em; color: #002B5B; margin-bottom: 20px;">Tentang Biro Enship</h2>
+            <div style="max-width: 1000px; margin: auto; background: white; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding: 40px;">
+                <p style="font-size: 1.1em; line-height: 1.8; text-align: justify; margin-bottom: 30px;">
+                    <strong>Biro Enship</strong> (Entrepreneurship) adalah biro di bawah naungan Himavo Micro IT – IPB, yang berperan sebagai penggerak utama sektor ekonomi organisasi. Kami berkomitmen mendukung perekonomian organisasi melalui kegiatan kewirausahaan yang <strong>inovatif</strong>, <strong>produktif</strong>, dan <strong>berkelanjutan</strong>.
+                </p>
+                
+                <h3 style="color: #002B5B; margin-top: 20px;">Sejarah Singkat</h3>
+                <p style="line-height: 1.7; text-align: justify;">
+                    Biro Enship didirikan tiga tahun lalu oleh ketua Himavo sebelumnya sebagai respon atas kebutuhan akan sumber pendanaan mandiri dan wadah bisnis mahasiswa. Kini, Enship menjadi pilar penting dalam mendukung kegiatan Himavo secara kreatif dan finansial.</p>   
+            </div>
+        </section>
+
+        <section id="struktur">
+            <h2 class="struktur-title">Kepengurusan Biro Enship 2024/2025</h2>
+            <div class="struktur-grid" id="strukturContainer"></div>
+        </section>
+
+        <script>
+            fetch('struktur.json')
+              .then(response => response.json())
+              .then(data => {
+                const container = document.getElementById('strukturContainer');
+                data.forEach(anggota => {
+                  const card = document.createElement('div');
+                  card.className = 'struktur-card';
+                  card.innerHTML = `
+                    <img src="${anggota.foto}" alt="${anggota.nama}">
+                    <h3>${anggota.nama}</h3>
+                    <p>${anggota.jabatan}</p>
+                  `;
+                  container.appendChild(card);
+                });
+              })
+              .catch(error => {
+                console.error('Gagal memuat data struktur:', error);
+              });
+          </script>
+
+        <section id="testimoni-enship">
+            <h3>Cerita Kami di Biro Entrepreneurship</h3>
+            <div class="testi-container">
+                <div class="testi-card">
+                    <p class="testi-text">
+                        Dulu aku kira entrepreneurship itu cuma soal untung dan rugi. Tapi makin ke sini, aku belajar bahwa entrepreneurship itu soal keberanian.
+                        Keberanian untuk memulai, salah, belajar, dan tumbuh.
+                        Dan itulah semangat yang ingin kami hadirkan di Biro Enship, ruang dimana kita bisa betumbuh bersama
+                    </p>
+                    <p class="testi-author">— Dwina Sarah Diva</p>
+                </div>
+
+                <div class="testi-card">
+                    <p class="testi-text">
+                        Ternyata jadi bendahara itu bukan cuma soal catat pengeluaran & pemasukan, tapi juga belajar komunikasi, kepercayaan, juga kerjasama tim. 
+                        Di Enship, aku bukan cuma memikul tanggung jawab sebagai bendahara, tapi aku juga selalu diajak untuk belajar grow up bareng temen-temen.
+                    </p>
+                    <p class="testi-author">— Silvia Ariani Daulay</p>
+                </div>
+
+                <div class="testi-card">
+                    <p class="testi-text">
+                        Yang paling berkesan dari Enship itu bukan cuma ilmu wirausahanya, tapi suasananya yang suportif banget. Merasa dihargai, juga didorong buat maju bersama. Dari sini aku belajar banyak tentang kerjasama tim dan bikin diri aku semakin berkembang.
+                    </p>
+                    <p class="testi-author">— Daffa Maulana Kindi</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-col">
+            <h4>PRESENTED BY</h4>
+            <div class="footer-logos">
+              <img src="image/Logo SV IPB.png" alt="Logo 1" />
+              <img src="image/Enship no circle.png" alt="Logo 2" />
+              <img src="image/LOGO HIMAVO MICRO IT.png" alt="Logo 3" />
+            </div>
+          </div>
+    
+          <div class="footer-col">
+            <h4>MORE INFO</h4>
+            <p><strong>Call Us:</strong><br />0838-0590-1251</p>
+            <p><strong>Email:</strong><br /><a href="mailto:micro60tekno@gmail.com">micro60tekno@gmail.com</a></p>
+            <p><strong>Careers:</strong><br />Himavo Micro IT Biro Entrepreneurship</p>
+          </div>
+    
+          <div class="footer-col">
+            <h4>CONNECT WITH US</h4>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/share/1AMm7vqh7g/"><img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook" /></a>
+              <a href="https://x.com/micro_ipb?t=aZtbVM-NtFDLIYutdGHdiw&s=09"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png" alt="X" /></a>
+              <a href="https://www.linkedin.com/company/himavo-micro-it-community/"><img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn" /></a>
+              <a href="https://youtube.com/@himavomicroit?si=QGXHOm7KGbRa8Pbh"><img src="https://cdn-icons-png.flaticon.com/512/733/733590.png" alt="YouTube" /></a>
+              <a href="https://www.instagram.com/micro_ipb?igsh=ajlxcjc5ODZqcGM3"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
+            </div>
+            <div style="margin-top: 20px;">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.4658458554177!2d106.80364147326883!3d-6.588872464405762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c5344e742491%3A0x50876f85f6c0d99b!2sSEKOLAH%20VOKASI%20IPB%20KAMPUS%20GUNUNG%20GEDE!5e0!3m2!1sid!2sid!4v1748457489272!5m2!1sid!2sid"
+                width="100%"
+                height="200"
+                style="border:0; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+    
+        <div class="footer-divider"></div>
+        <div class="footer-bottom-nav">
+          © 2025 Biro Enship, Himavo Micro IT - SV IPB
+        </div>
+      </footer>
+
+</body>
+</html>

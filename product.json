@@ -1,0 +1,52 @@
+[
+  {
+    "nama": "LANYARD",
+    "deskripsi": "Lanyard eksklusif dengan desain Himavo Micro IT. Cocok untuk ID card, stylish dan tahan lama untuk kegiatan sehari-hari.",
+    "gambar": "Image/lanyard mikro.jpg"
+  },
+  {
+    "nama": "KEYCHAIN",
+    "deskripsi": "Gantungan kunci unik hadir di sini. Aksesori kecil yang memperkuat identitas, cocok untuk tas atau kunci motor.",
+    "gambar": "Image/keychain mikro.jpg"
+  },
+  {
+    "nama": "PDH MICRO IT",
+    "deskripsi": "Pakaian Dinas Harian resmi Himavo Micro IT. Dirancang khusus dengan kualitas premium dan kenyamanan maksimal.",
+    "gambar": "Image/pdh mikro.jpg"
+  },
+  {
+    "nama": "PIN MICRO IT",
+    "deskripsi": "Pin edisi resmi Himavo Micro IT. Sempurna untuk memperindah tas, jaket, atau topi Anda.",
+    "gambar": "Image/pin micro.jpg"
+  },
+  {
+    "nama": "STICKER",
+    "deskripsi": "Stiker eksklusif dengan desain kreatif khas Micro IT. Tahan air dan cocok untuk laptop, botol minum, atau binder.",
+    "gambar": "Image/Stiker Mikro.jpg"
+  },
+  {
+    "nama": "CEMILAN MAHASIGMA",
+    "deskripsi": "Camilan khas Mahasigma favorit mahasiswa. Nikmat, gurih, dan bikin nagih di setiap gigitan.",
+    "gambar": "Image/Cemilan Mahasigma.jpg"
+  },
+  {
+    "nama": "JAKET MICRO (Coming Soon)",
+    "deskripsi": "Jaket resmi Himavo Micro IT akan segera hadir! Nyaman dipakai harian, dengan desain eksklusif dan penuh makna.",
+    "gambar": "Image/Jaket Mikro.jpg"
+  },
+  {
+    "nama": "KRIPCA dan BASRENG",
+    "deskripsi": "Snack pedas kekinian yang bikin nagih! Cocok dinikmati sambil tugas atau santai bareng teman.",
+    "gambar": "Image/Kripca dan Basreng Mikro.jpg"
+  },
+  {
+    "nama": "MOCHI",
+    "deskripsi": "Mochi lembut isi manis yang bikin bahagia. Camilan ringan favorit semua kalangan.",
+    "gambar": "Image/Mochi Mikro.jpg"
+  },
+  {
+    "nama": "SNACK dan COOKIES",
+    "deskripsi": "Pilihan snack dan cookies lezat buatan mahasiswa kreatif. Cocok untuk teman belajar atau oleh-oleh.",
+    "gambar": "Image/Snack and Cokies Mikro.jpg"
+  }
+]

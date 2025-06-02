@@ -1,0 +1,47 @@
+[
+    {
+      "nama": "Dwina Sarah Diva",
+      "jabatan": "KETUA",
+      "foto": "Image/dwina.jpeg"
+    },
+    {
+      "nama": "Keisha Azzahra Lathifah",
+      "jabatan": "WAKIL KETUA",
+      "foto": "Image/keisha.jpeg"
+    },
+    {
+      "nama": "Rizal Hadi Musthofani",
+      "jabatan": "SEKRETARIS",
+      "foto": "Image/rizal.jpeg"
+    },
+    {
+      "nama": "Silvia Ariani Daulay",
+      "jabatan": "BENDAHARA",
+      "foto": "Image/silvia.jpeg"
+    },
+    {
+      "nama": "Hafiz Tiftazani",
+      "jabatan": "ANGGOTA",
+      "foto": "Image/hafiz.jpeg"
+    },
+    {
+      "nama": "Moch. Farrel Azqila",
+      "jabatan": "ANGGOTA",
+      "foto": "Image/farrel.jpeg"
+    },
+    {
+      "nama": "Ghazy Hassan",
+      "jabatan": "ANGGOTA",
+      "foto": "Image/ghazy.jpeg"
+    },
+    {
+      "nama": "Faza Mumtaz Ramadhan",
+      "jabatan": "ANGGOTA",
+      "foto": "Image/faza.jpeg"
+    },
+    {
+      "nama": "Daffa Maulana Kindi AL",
+      "jabatan": "ANGGOTA",
+      "foto": "Image/daffa.jpeg"
+    }
+  ]
